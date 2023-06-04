@@ -1,0 +1,6 @@
+<div class="log" [ngClass]="{'log--right': !title}">
+  <h3 class="list" *ngIf="title">{{title}}</h3>
+  <h3 class="card" (click) = "goToCart()">Cart (
+    <ng-container *ngIf="cartQty$ | async as cartQty; else zeroQty">{{cartQty}}</ng-container> )</h3>
+    <ng-template #zeroQty>0</ng-template>
+</div>

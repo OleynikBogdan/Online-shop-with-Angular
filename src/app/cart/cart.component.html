@@ -1,0 +1,30 @@
+<header></header>
+<ng-container *ngIf="products$ | async as productList">
+  <ng-container *ngFor="let product of productList">
+    <div class="cart-product">
+      <div class="cart-product--header">
+        <div class="product-info">
+          <div class="product-image"></div> {{product.name}}
+        </div>
+        <button class="delete-button" (click)="deleteProduct(product.orderNumber)">Delete</button>
+      </div>
+      <div class="cart-product--body">
+       <div class="cart-product--body__left-side">
+         <span>Order Number: {{product.orderNumber}}</span>
+         <span>Quantity: {{product.quantity}}</span>
+         <span>Total price: {{product.totalPrice}}$</span>
+       </div>
+        <div class="cart-product--body__right-side">
+          <span>Order Date: {{product.orderDate | date: 'dd MMMM, yyyy'}}</span>
+          <span>Price for one: {{product.price}}$</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="productList.length">
+    <div class="pay-position">
+      <button class="pay-button" *ngIf="cartSum$ | async as cartSum" (click)="goToCheckout()">Pay ${{cartSum}}</button>
+    </div>
+  </ng-container>
+</ng-container>
+

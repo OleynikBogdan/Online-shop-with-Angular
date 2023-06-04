@@ -1,0 +1,32 @@
+<header></header>
+<div class="title"> Checkout </div>
+<ng-container *ngIf="!submitted; else submitBlock">
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <label for="email">Email </label>
+    <input id="email" type="email" [formControl]="emailControl">
+    <label for="full-name">Fullname </label>
+    <input id="full-name" type="text" [formControl]="fullNameControl">
+    <label for="address">Address </label>
+    <input id="address" type="text" [formControl]="addressControl">
+    <label for="phone">Phone </label>
+    <input id="phone" type="text" [formControl]="phoneControl">
+    <label for="credit-card">Credit Card Number </label>
+    <input id="credit-card" type="text" [formControl]="creditCardControl">
+    <label for="cvv">CVV </label>
+    <input id="cvv" type="number" [formControl]="cvvControl">
+    <button type="submit" class="button" [disabled] = "!checkoutForm.valid"  *ngIf="cartSum$ | async as cartSum">Pay ${{cartSum}}</button>
+  </form>
+</ng-container>
+<ng-template #submitBlock>
+<div class="submit-block--container">
+  <p class="info">Personal information</p>
+  <div class="info-block">
+    <span class="info"> {{checkoutInfo.fullName}} </span>
+    <span class="info"> {{checkoutInfo.address}} </span>
+    <span class="info">Tel: {{checkoutInfo.phone}} </span>
+    <span class="info">Credit Card: {{checkoutInfo.credit | TransformCreditCard}} </span>
+    <span class="info">Cvv {{checkoutInfo.cvv | TransformToStar}} </span>
+  </div>
+  <button class="button full-width"*ngIf="cartSum$ | async as cartSum" (click) = "goToCheck()">Pay ${{cartSum}} </button>
+</div>
+</ng-template>

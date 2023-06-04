@@ -1,0 +1,81 @@
+:host {
+  font-family:"Roboto Light" ;
+  line-height: 28px;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (width: 375px) {
+    line-height: 28px;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .log {
+    display: flex;
+    flex-direction: column;
+
+    h5{
+      margin: 0;
+    }
+    h3{
+      padding-bottom: 45px;
+    }
+    input {
+      height: 35px;
+      width: 221px;
+      border: 0px;
+      background-color: #C4C4C4;
+      outline: none;
+      margin-bottom: 23px;
+      outline: none !important;
+    }
+  }
+
+  .link{
+    display: flex;
+    border: none;
+    outline: none;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 50px;
+    width: 225px;
+    height: 33px;
+    align-content: center;
+    background-color: #FFAA2B;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+
+    font-style: normal;
+  }
+}
+.error{
+  color: red;
+}
+
+h2{
+  display: flex;
+  justify-content: center
+}
+
+disabled{
+  background-color: grey;
+}
+
+.email-pass{
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.butt{
+  isplay: flex;
+  flex-direction: column;
+  align-items: center
+}
+

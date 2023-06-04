@@ -1,0 +1,13 @@
+<header  *ngIf="cartQtyZero$ | async">
+  <ng-template #zeroQty>0</ng-template>
+</header>
+<div class="wrapper">
+  <div class="last-chek">
+    <div class="purshase">
+      <h1> Thank you for your purchase!</h1>
+      <h3>Your order number:</h3>
+      <div class="order-number" *ngIf="orderNumber$ | async as orderNumber">{{orderNumber}}
+      </div>
+    </div>
+  </div>
+</div>

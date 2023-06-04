@@ -1,0 +1,74 @@
+.button-title{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.cart-product{
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  background: #FFFFFF;
+  font-family: 'Roboto';
+  font-style: normal;
+  line-height: 16px;
+
+  color: #000000;
+  &--header{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #A2A2A2;
+    justify-content: space-between;
+    .product-image{
+      width: 48px;
+      height: 48px;
+      margin: 4px 7px 6px 8px;
+      background: #D9D9D9;
+    }
+
+    .product-info{
+      display: flex;
+      align-items: center;
+    }
+
+    .delete-button{
+      width: 90px;
+      height: 33px;
+      background: #FF4747;
+      color: #FFFFFF;
+      border: none;
+      margin: 0 9px;
+      @extend .button-title
+    }
+  }
+
+  &--body{
+    display: flex;
+    padding-bottom: 7px;
+
+    &__left-side, &__right-side{
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      span{
+        margin: 11px 0 0 8px ;
+      }
+    }
+  }
+}
+  .pay-button{
+    width: 308px;
+    height: 33px;
+    background: #FFAA2B;
+    color: #000000;
+    border: none;
+    @extend .button-title
+  }
+  .pay-position{
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+
+  }

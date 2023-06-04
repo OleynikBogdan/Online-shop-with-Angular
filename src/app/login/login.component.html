@@ -1,0 +1,29 @@
+<form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+<h2>Login</h2>
+<div class="log">
+  <div class="email-pass">
+  <h5> Email</h5>
+  <input type="email" name="email" id="email" #Email formControlName="email">
+  <div *ngIf="loginForm.get('email').invalid && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+    <div *ngIf="loginForm.get('email').hasError('required')">Email is required</div>
+    <div *ngIf="loginForm.get('email').hasError('email')">Invalid email format</div>
+  </div>
+  </div>
+
+  <div class="email-pass">
+    <h5> Pass </h5>
+    <input type="password" name="pass" id="pass" #Pass formControlName="password">
+    <div *ngIf="loginForm.get('password').invalid && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+      <div *ngIf="loginForm.get('password').hasError('required')">Password is required</div>
+      <div *ngIf="loginForm.get('password').hasError('minlength')">Password must be at least 5 characters long</div>
+    </div>
+  </div>
+<!--  <div class="error" *ngIf="error$ | async as error">-->
+<!--    {{error}}-->
+<!--  </div>-->
+</div>
+<button class="link butt" (click)="checkUser(Email.value, Pass.value)" [disabled]="loginForm.invalid">Login </button>
+</form>
+<!---->
+
+

@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  display: flex;
+    padding: 0;
+    margin: 0 auto;
+  flex-direction: column;
+  background-color:#E5E5E5;
+  .product-poz{
+    margin: 0 33px 0 34px;
+    .block-l{
+      display: flex;
+      width: 308px;
+      height: 236px;
+      justify-content: space-around;
+      background-color: #C4C4C4;
+    }
+    @media (width: 375px) {
+      display: flex;
+      overflow-x: hidden;
+      line-height: 28px;
+      font-style: normal;
+      flex-direction: column;
+      align-items: center;
+
+      h4{
+        width: 292px;
+        word-spacing: 5px;
+      }
+    }
+  }
+    }

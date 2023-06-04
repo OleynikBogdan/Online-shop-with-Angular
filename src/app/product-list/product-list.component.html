@@ -1,0 +1,6 @@
+<header [title]="'Prodoucts list'"></header>
+<ng-container *ngIf=" productList$ | async as list">
+  <ng-container *ngFor="let product of list">
+    <product-card [product]="product"></product-card>
+  </ng-container>
+</ng-container>

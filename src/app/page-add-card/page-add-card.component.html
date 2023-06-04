@@ -1,0 +1,19 @@
+<header></header>
+<div class="product-poz" *ngIf="product$ | async as product">
+  <h3><b> {{product.name}}</b></h3>
+  <div class="block-l"></div>
+  <div class ="description">
+    {{product.description}}
+  </div>
+  <div class="price">
+   Price: {{product.price}}$
+  </div>
+  <div class="counter">
+    <div class="counter--text counter--text__with-margin">Qty:</div>
+    <div class="counter--circle" (click)="inc()"> + </div>
+    <div class="counter--text"> {{counter}}</div>
+    <div class="counter--circle"(click)="dec()"> - </div>
+  </div>
+  <button class="cart-button" (click)="addToCart()">Add To Cart</button>
+</div>
+

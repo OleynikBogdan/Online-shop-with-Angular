@@ -1,0 +1,75 @@
+:host {
+  font-family: "Roboto Light";
+
+  line-height: 14px;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  background-size: 100% 10em ;
+
+  .description{
+    text-align: justify;
+    margin-top: 24px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+  }
+
+  .price{
+    margin-top: 17px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+  }
+
+
+  .counter{
+    display: flex;
+    margin-top: 19px;
+    &--text{
+      display: flex;
+      align-items: center;
+      display: flex;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #000000;
+      &__with-margin{
+        margin-right: 6px;
+      }
+    }
+    &--circle{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 7px 0 8px;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      border-radius: 16px;
+      background-color: #C4C4C4;
+    }
+
+  }
+  .cart-button{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    width: 308px;
+    height: 33px;
+    background: #FFAA2B;
+    border: none;
+    margin-top: 51px;
+    }
+  }
